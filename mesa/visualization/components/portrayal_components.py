@@ -27,6 +27,10 @@ class AgentPortrayalStyle:
     x, y are determined automatically according to the agent's type
     (normal/CellAgent) and position in the space if not manually declared.
 
+    The ``filled`` attribute controls whether shapes are drawn filled (solid) or
+    as outlines only. When ``False``, the agent's ``color`` is used as the stroke
+    color instead of the fill color (Altair backend only).
+
     Example:
         >>> def agent_portrayal(agent):
         >>>     return AgentPortrayalStyle(
@@ -55,6 +59,7 @@ class AgentPortrayalStyle:
     alpha: float | None = 1.0
     edgecolors: str | tuple | None = None
     linewidths: float | int | None = 1.0
+    filled: bool | None = True
     tooltip: dict | None = None
 
     def update(self, *updates_fields: tuple[str, Any]):

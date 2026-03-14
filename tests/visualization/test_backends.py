@@ -227,6 +227,29 @@ def test_altair_backend_collects_agent_data_marker_mapping():
     assert data["shape"][0] == "square"
 
 
+def test_altair_backend_collects_agent_data_filled():
+    """Test collect_agent_data respects the filled attribute of AgentPortrayalStyle."""
+    ab = AltairBackend(space_drawer=MagicMock())
+
+    class DummyAgent:
+        pos = (0, 0)
+        cell = types.SimpleNamespace(coordinate=(0, 0))
+
+    class DummySpace:
+        agents: ClassVar[list] = [DummyAgent(), DummyAgent()]
+
+    agents = DummySpace.agents
+
+    def agent_portrayal(agent):
+        if agent is agents[0]:
+            return AgentPortrayalStyle(x=0, y=0, filled=True)
+        return AgentPortrayalStyle(x=1, y=1, filled=False)
+
+    data = ab.collect_agent_data(DummySpace(), agent_portrayal)
+    assert data["filled"][0] is np.bool_(True)
+    assert data["filled"][1] is np.bool_(False)
+
+
 def test_altair_backend_draw_agents():
     """Test draw_agents."""
     # Test with empty data

@@ -180,8 +180,7 @@ class AltairBackend(AbstractRenderer):
                 else style_fields.get("linewidths")
             )
 
-            # FIXME: Make filled user-controllable
-            filled_value = True
+            filled_value = aps.filled if aps.filled is not None else style_fields.get("filled", True)
             arguments["filled"].append(filled_value)
 
         final_data = {}
