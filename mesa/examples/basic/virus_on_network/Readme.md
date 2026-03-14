@@ -16,19 +16,22 @@ JavaScript library used in this example to render the network: [d3.js](https://d
 
 ## Installation
 
-To install the dependencies use pip and the requirements.txt in this directory. e.g.
+This model requires Mesa with network and visualization support:
 
-```
-    $ pip install -r requirements.txt
+```bash
+pip install mesa[rec]
 ```
 
 ## How to Run
 
-To run the model interactively, in this directory, run the following command
+Navigate to this directory and run the interactive visualization:
 
+```bash
+cd mesa/examples/basic/virus_on_network
+solara run app.py
 ```
-    $ solara run app.py
-```
+
+Then open your browser to the URL shown in the terminal (typically `http://localhost:8765`).
 
 ## Files
 

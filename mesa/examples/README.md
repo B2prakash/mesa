@@ -8,6 +8,40 @@ The examples are categorized into two groups:
 
 > **Note:** Looking for more examples? Visit the [mesa-examples](https://github.com/mesa/mesa-examples) repository for user-contributed models and showcases.
 
+## Installation
+
+All examples require Mesa with visualization support. Install it with:
+
+```bash
+pip install mesa[rec]
+```
+
+## Running the Examples
+
+The examples are bundled with Mesa. You can locate them in two ways:
+
+**Option 1 — From a cloned repository:**
+
+```bash
+git clone https://github.com/mesa/mesa.git
+cd mesa
+pip install -e ".[rec]"
+cd mesa/examples/basic/boltzmann_wealth_model  # or any other example
+solara run app.py
+```
+
+**Option 2 — From an installed Mesa package:**
+
+```bash
+# Find where Mesa installed the examples
+python -c "import mesa.examples, os; print(os.path.dirname(mesa.examples.__file__))"
+# Navigate to that directory, then into the example subdirectory
+cd <printed path>/basic/boltzmann_wealth_model
+solara run app.py
+```
+
+Each example directory contains its own `Readme.md` with a description and any additional instructions.
+
 ## Basic Examples
 The basic examples are relatively simple and only use stable Mesa features. They are good starting points for learning how to use Mesa.
 

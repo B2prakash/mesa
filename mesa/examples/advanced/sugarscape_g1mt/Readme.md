@@ -41,13 +41,24 @@ The model demonstrates several Mesa concepts and features:
  - custom solara matplotlib space visualization
 
 
+## Installation
+
+Make sure Mesa is installed with visualization support:
+
+```bash
+pip install mesa[rec]
+```
+
 ## How to Run
 
-To run the model interactively, in this directory, run the following command
+Navigate to this directory and run the interactive visualization:
 
+```bash
+cd mesa/examples/advanced/sugarscape_g1mt
+solara run app.py
 ```
-    $ solara run app.py
-```
+
+Then open your browser to the URL shown in the terminal (typically `http://localhost:8765`).
 
 ## Files
 

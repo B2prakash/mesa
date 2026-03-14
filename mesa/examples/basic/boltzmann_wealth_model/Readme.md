@@ -6,13 +6,24 @@ A simple model of agents exchanging wealth. All agents start with the same amoun
 
 As the model runs, the distribution of wealth among agents goes from being perfectly uniform (all agents have the same starting wealth), to highly skewed -- a small number have high wealth, more have none at all.
 
+## Installation
+
+Make sure Mesa is installed with visualization support:
+
+```bash
+pip install mesa[rec]
+```
+
 ## How to Run
 
-To run the model interactively, in this directory, run the following command
+Navigate to this directory and run the interactive visualization:
 
+```bash
+cd mesa/examples/basic/boltzmann_wealth_model
+solara run app.py
 ```
-    $ solara run app.py
-```
+
+Then open your browser to the URL shown in the terminal (typically `http://localhost:8765`).
 ## Files
 
 * ``model.py``: Final version of the model.

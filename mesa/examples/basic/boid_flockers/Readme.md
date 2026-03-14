@@ -6,13 +6,24 @@ An implementation of Craig Reynolds's Boids flocker model. Agents (simulated bir
 
 This model tests Mesa's continuous space feature, and uses numpy arrays to represent vectors.
 
+## Installation
+
+Make sure Mesa is installed with visualization support:
+
+```bash
+pip install mesa[rec]
+```
+
 ## How to Run
 
-To run the model interactively, in this directory, run the following command
+Navigate to this directory and run the interactive visualization:
 
+```bash
+cd mesa/examples/basic/boid_flockers
+solara run app.py
 ```
-    $ solara run app.py
-```
+
+Then open your browser to the URL shown in the terminal (typically `http://localhost:8765`).
 
 
 ## Files

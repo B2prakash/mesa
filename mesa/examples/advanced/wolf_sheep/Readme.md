@@ -14,23 +14,30 @@ The model is tests and demonstrates several Mesa concepts and features:
  - Writing a model composed of multiple files.
  - Dynamically adding and removing agents from the schedule
 
+## Installation
+
+Make sure Mesa is installed with visualization support:
+
+```bash
+pip install mesa[rec]
+```
+
 ## How to Run
 
-To run the model interactively, in this directory, run the following command
+Navigate to this directory and run the interactive visualization:
 
+```bash
+cd mesa/examples/advanced/wolf_sheep
+solara run app.py
 ```
-    $ solara run app.py
-```
+
+Then open your browser to the URL shown in the terminal (typically `http://localhost:8765`).
 
 ## Files
 
-* ``wolf_sheep/random_walk.py``: This defines the ``RandomWalker`` agent, which implements the behavior of moving randomly across a grid, one cell at a time. Both the Wolf and Sheep agents will inherit from it.
-* ``wolf_sheep/test_random_walk.py``: Defines a simple model and a text-only visualization intended to make sure the RandomWalk class was working as expected. This doesn't actually model anything, but serves as an ad-hoc unit test. To run it, ``cd`` into the ``wolf_sheep`` directory and run ``python test_random_walk.py``. You'll see a series of ASCII grids, one per model step, with each cell showing a count of the number of agents in it.
-* ``wolf_sheep/agents.py``: Defines the Wolf, Sheep, and GrassPatch agent classes.
-* ``wolf_sheep/scheduler.py``: Defines a custom variant on the RandomActivationByType scheduler, where we can define filters for the `get_type_count` function.
-* ``wolf_sheep/model.py``: Defines the Wolf-Sheep Predation model itself
-* ``wolf_sheep/server.py``: Sets up the interactive visualization server
-* ``run.py``: Launches a model visualization server.
+* ``agents.py``: Defines the Wolf, Sheep, and GrassPatch agent classes.
+* ``model.py``: Defines the Wolf-Sheep Predation model itself.
+* ``app.py``: Sets up the interactive Solara visualization.
 
 ## Further Reading
 

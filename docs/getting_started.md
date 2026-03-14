@@ -3,6 +3,26 @@ Mesa is a modular framework for building, analyzing and visualizing agent-based 
 
 **Agent-based models** are computer simulations involving multiple entities (the agents) acting and interacting with one another based on their programmed behavior. Agents can be used to represent living cells, animals, individual humans, even entire organizations or abstract entities. Sometimes, we may have an understanding of how the individual components of a system behave, and want to see what system-level behaviors and effects emerge from their interaction. Other times, we may have a good idea of how the system overall behaves, and want to figure out what individual behaviors explain it. Or we may want to see how to get agents to cooperate or compete most effectively. Or we may just want to build a cool toy with colorful little dots moving around.
 
+## Installation
+
+Install Mesa using pip. The recommended install includes visualization and networking support:
+
+```bash
+pip install mesa[rec]
+```
+
+You can also install only what you need:
+
+```bash
+pip install mesa                    # core only
+pip install mesa[viz]               # core + visualization (matplotlib, solara, altair)
+pip install mesa[network]           # core + network support (networkx)
+pip install mesa[rec]               # recommended: core + viz + network
+pip install mesa[all]               # everything, including dev tools
+```
+
+Mesa requires Python 3.12 or higher.
+
 ## Overview
 If you want to get a general idea of Mesa’s features and structure, start here:
 

@@ -15,13 +15,24 @@ Where *D* is the defection bonus, generally set higher than 1. In these runs, th
 
 The Demographic Prisoner's Dilemma demonstrates how simple rules can lead to the emergence of widespread cooperation, despite the Defection strategy dominating each individual interaction game. However, it is also interesting for another reason: it is known to be sensitive to the activation regime employed in it.
 
+## Installation
+
+Make sure Mesa is installed with visualization support:
+
+```bash
+pip install mesa[rec]
+```
+
 ## How to Run
 
-To run the model interactively, in this directory, run the following command
+Navigate to this directory and run the interactive visualization:
 
+```bash
+cd mesa/examples/advanced/pd_grid
+solara run app.py
 ```
-    $ solara run app.py
-```
+
+Then open your browser to the URL shown in the terminal (typically `http://localhost:8765`).
 
 ## Files
 

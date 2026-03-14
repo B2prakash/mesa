@@ -7,13 +7,24 @@
 The "game" is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input by a human. One interacts with the Game of "Life" by creating an initial configuration and observing how it evolves, or, for advanced "players", by creating patterns with particular properties.
 
 
+## Installation
+
+Make sure Mesa is installed with visualization support:
+
+```bash
+pip install mesa[rec]
+```
+
 ## How to Run
 
-To run the model interactively, in this directory, run the following command
+Navigate to this directory and run the interactive visualization:
 
+```bash
+cd mesa/examples/basic/conways_game_of_life
+solara run app.py
 ```
-    $ solara run app.py
-```
+
+Then open your browser to the URL shown in the terminal (typically `http://localhost:8765`).
 
 ## Files
 
@@ -22,9 +33,19 @@ To run the model interactively, in this directory, run the following command
 * ``app.py``: Defines an interactive visualization using solara.
 * ``st_app.py``: Defines an interactive visualization using Streamlit.
 
-## Optional
+## Optional: Streamlit Visualization
 
-* For the streamlit version, you need to have streamlit installed (can be done via pip install streamlit)
+An alternative Streamlit-based visualization is also available. Install Streamlit first:
+
+```bash
+pip install streamlit
+```
+
+Then run:
+
+```bash
+streamlit run st_app.py
+```
 
 
 ## Further Reading

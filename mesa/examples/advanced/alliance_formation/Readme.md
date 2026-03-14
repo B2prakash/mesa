@@ -21,19 +21,22 @@ If you would like to see an example of explicit meta-agent formation see the [wa
 
 ## Installation
 
-This model requires Mesa's recommended install and scipy
+This model requires Mesa's recommended install:
 
-```
-    $ pip install mesa[rec]
+```bash
+pip install mesa[rec]
 ```
 
 ## How to Run
 
-To run the model interactively, in this directory, run the following command
+Navigate to this directory and run the interactive visualization:
 
+```bash
+cd mesa/examples/advanced/alliance_formation
+solara run app.py
 ```
-    $ solara run app.py
-```
+
+Then open your browser to the URL shown in the terminal (typically `http://localhost:8765`).
 
 ## Files
 
